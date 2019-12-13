@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        #pitch{
+			width:800px;
+			height:600px;
+			background-image:url(https://cdn11.bigcommerce.com/s-zebznqh0/images/stencil/600x600/products/2075/2339/1128080000110229__25306.1456307243.jpg?c=2);
+			background-size:center;
+			background-image:cover;
+			background-repeat: no-repeat;
+			font-size:100px;
+			color:lightblue;
+		}
+
+		}
+		#players{
+			width:300px;
+			height:300px;
+			position:relative;
+			top:25%;
+			left:20%;
+			background-repeat: no-repeat;
+			background-size:cover;
+		}
+	</style>
+</head>
+
+<body>
+    <div id="pitch">
+    	<div id="food"></div>
+    </div>
+    <script type="text/javascript">
+    var soccer = [
+        "url(https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p78830.png)", "url(https://tot-tmp.azureedge.net/media/20082/u18_troy_parrott.png?anchor=center&mode=crop&width=500)", "url(https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p19760.png)"
+    ]
+var players = document.getElementById("players");
+    var pitch = document.getElementById("pitch");
+    pitch.addEventListener("click", function() {
+        players.style.backgroundImage = soccer[Math.floor(Math.random() * 3)]
+    });
+
+    </script>
+
+
+</body>
+
+</html>
