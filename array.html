@@ -1,50 +1,51 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title></title>
-    <style>
-        #pitch{
-			width:800px;
-			height:600px;
-			background-image:url(https://cdn11.bigcommerce.com/s-zebznqh0/images/stencil/600x600/products/2075/2339/1128080000110229__25306.1456307243.jpg?c=2);
-			background-size:center;
-			background-image:cover;
-			background-repeat: no-repeat;
-			font-size:100px;
-			color:lightblue;
-		}
-
-		}
-		#players{
-			width:300px;
-			height:300px;
-			position:relative;
-			top:25%;
-			left:20%;
-			background-repeat: no-repeat;
-			background-size:cover;
-		}
-	</style>
+    <style type="text/css">
+        button{
+            width: 200px;
+            height: 50px;
+            font-size: 20px
+        }
+        #image{
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            ;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="pitch">
-    	<div id="food"></div>
-    </div>
-    <script type="text/javascript">
-    var soccer = [
-        "url(https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p78830.png)", "url(https://tot-tmp.azureedge.net/media/20082/u18_troy_parrott.png?anchor=center&mode=crop&width=500)", "url(https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p19760.png)"
-    ]
-var players = document.getElementById("players");
-    var pitch = document.getElementById("pitch");
-    pitch.addEventListener("click", function() {
-        players.style.backgroundImage = soccer[Math.floor(Math.random() * 3)]
-    });
+   
+        <button  id="button"
+>Choose a random yid
+        </button>
+<div id="image"></div>
+        <script type="text/javascript">
+            
+var button = document.getElementById('button');
+var image = document.getElementById("image");
 
-    </script>
+            	var team = ["url(https://tot-tmp.azureedge.net/media/20208/firstteam_harrykane.png?anchor=center&mode=crop&width=750)", "url(https://metro.co.uk/wp-content/uploads/2019/09/PRI_79693366.jpg?quality=90&strip=all)", "url(https://static01.nyt.com/images/2019/05/31/sports/30onsoccer-sonbig/merlin_150648111_d176eede-676a-4459-9d0e-66ef7ebf6d10-articleLarge.jpg?quality=75&auto=webp&disable=upscale)", "url(https://cdn.24.co.za/files/Cms/General/d/7124/9b95abfa760c46a1bd5684545f6fc648.jpg)", "url(https://talksport.com/wp-content/uploads/sites/5/2020/01/tanganga.jpg?strip=all&w=960&quality=100)", "url(https://talksport.com/wp-content/uploads/sites/5/2019/01/GettyImages-1018516298.jpg?strip=all&w=640&quality=100)", "url(https://images-e.jpimedia.uk/imagefetch/w_400,f_auto,ar_3:2,q_auto:low,c_fill/if_h_lte_200,c_mfit,h_201/https://www.scotsman.com/webimage/1.4786984.1534780990!/image/image.jpg)", "url(https://resources.premierleague.com/premierleague/photos/players/250x250/p231372.png)"];
+
+button.addEventListener(
+    "click", function chooseTeam(){
+var randomNumber = Math.round(Math.random()*8);
+    
+
+image.style.backgroundImage = team[randomNumber];
+    console.log(randomNumber);
+});
 
 
+            	//function has 3 parts: 1. generating a random whole number between and including 0 and 7. 2. set the background image of a div to the array[IN HERE IS THE RANDOM NUMBER] (because when you put a number with the name of an array between those square brackets, it referes to that number element in the array.) 
+            </script>
 </body>
 
 </html>
